@@ -1,15 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import DataBindingList from '../views/DataBindingList2.vue'
+import DataBinding from '../views/DataBinding.vue'
+import SlotModal from '../views/SlotUseModalLayout.vue'
+import NestedComponent from '../views/NestedComponent.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
-  },
-  {
-    path: '/about',
     name: 'about',
     component: () => import('../views/AboutView.vue')
   },
@@ -19,10 +16,20 @@ const routes = [
     component: DataBindingList
   },
   {
+    path: '/databinding',
+    name: 'DataBinding',
+    component: DataBinding
+  },
+  {
     path: '/nestedComponent',
     name: 'NestedComponent',
-    component: () => import('../views/NestedComponent.vue')
-  }
+    component: NestedComponent
+  },
+  {
+    path: '/slotModal',
+    name: 'SlotModal',
+    component: SlotModal
+  },
 ]
 
 const router = createRouter({
