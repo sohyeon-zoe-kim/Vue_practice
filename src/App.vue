@@ -1,11 +1,16 @@
 <template>
-	<nav><router-link to="/">About</router-link> | <router-link to="/databindingList">Data Binding</router-link> | <router-link to="/nestedComponent">Nested Component</router-link> | <router-link to="/slotModal">Slot</router-link></nav>
-	<router-view />
+	<nav>
+		<router-link to="/">Main</router-link> |
+		<router-link to="/databindingList">Databinding</router-link> |
+		<router-link to="/compositionAPI">Compostion</router-link> |
+		<router-link to="/plugins">Plugins</router-link>
+	</nav>
+	<router-view></router-view>
 </template>
 
 <style>
 #app {
-	font-family: Avenir, Helvetica, Arial, sans-serif;
+	font-family: "Pretendard";
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
