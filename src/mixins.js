@@ -8,13 +8,10 @@ export default {
         url,
         data
       }).catch(e => {
-        console.log(e);
+        console.log('Err: ',e);
       })).data;
       console.log(result);
       return result;
-    },
-    test() {
-      console.log("test");
     }
   }
 }

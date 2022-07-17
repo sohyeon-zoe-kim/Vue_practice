@@ -1,35 +1,27 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DataBindingList from '../views/DataBindingList2.vue'
-import DataBinding from '../views/DataBinding.vue'
-import SlotModal from '../views/SlotUseModalLayout.vue'
-import NestedComponent from '../views/NestedComponent.vue'
+import MainPage from '../views/MainPage.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'about',
-    component: () => import('../views/AboutView.vue')
+    name: 'main',
+    component: MainPage
   },
   {
     path: '/databindingList',
-    name: 'DataBindingList',
-    component: DataBindingList
+    name: 'dataBindingList',
+    component: () => import('../views/DataBindingList.vue')
   },
   {
-    path: '/databinding',
-    name: 'DataBinding',
-    component: DataBinding
+    path: '/compositionAPI',
+    name: 'compositionAPI',
+    component: () => import('../views/CompositionAPI.vue')
   },
   {
-    path: '/nestedComponent',
-    name: 'NestedComponent',
-    component: NestedComponent
-  },
-  {
-    path: '/slotModal',
-    name: 'SlotModal',
-    component: SlotModal
-  },
+    path: '/plugins',
+    name: 'plugins',
+    components: () => import('../views/Plugins.vue')
+  }
 ]
 
 const router = createRouter({
